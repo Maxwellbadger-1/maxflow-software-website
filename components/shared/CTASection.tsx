@@ -55,7 +55,7 @@ export function CTASection({
             <h2 className="mb-4 text-background">{title}</h2>
             <p className="text-lg text-background/80 mb-8">{description}</p>
             <Link href={buttonHref}>
-              <Button size="lg" className="group bg-background text-foreground hover:bg-background/90 shadow-xl">
+              <Button size="lg" className="group bg-white text-gray-900 hover:bg-white/90 hover:text-gray-900 shadow-xl">
                 {buttonText}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>

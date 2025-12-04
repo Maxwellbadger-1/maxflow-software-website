@@ -62,7 +62,7 @@ export function FinalCTA() {
               <Button
                 size="lg"
                 variant="secondary"
-                className="group shadow-xl hover:shadow-2xl transition-shadow bg-white text-foreground hover:bg-white/90"
+                className="group shadow-xl hover:shadow-2xl transition-shadow bg-white text-gray-900 hover:bg-white/90 hover:text-gray-900"
               >
                 Jetzt Kontakt aufnehmen
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

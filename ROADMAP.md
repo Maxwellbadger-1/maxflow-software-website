@@ -477,20 +477,22 @@ Gradients: Indigo→Purple→Pink (verschiedene Kombinationen)
 - [ ] SSL-Zertifikat automatisch aktiviert (Let's Encrypt via Vercel)
 - [ ] Live-Test: https://maxflow-software.de (mit 🔒)
 
-**Phase 4: E-Mail Setup**
-- [ ] **Resend Domain verifizieren:**
-  - Login: https://resend.com/domains → "Add Domain" → maxflow-software.de
-- [ ] **IONOS DNS Records hinzufügen:**
-  - **SPF (TXT):** @ → `v=spf1 include:resend.com ~all`
-  - **DKIM (TXT):** resend._domainkey → [String von Resend]
-  - **DMARC (TXT):** _dmarc → `v=DMARC1; p=none; rua=mailto:office@maxflow-software.de`
-- [ ] Resend Dashboard → "Verify Domain" (warte 10-30 Min)
-- [ ] **Code Update:** `/app/api/contact/route.ts` Zeile 25
-  - Von: `onboarding@resend.dev`
-  - Zu: `noreply@maxflow-software.de`
-  - Git commit & push → Vercel deployed automatisch
-- [ ] Kontaktformular live testen
-- [ ] Resend: DPA prüfen/akzeptieren
+**Phase 4: E-Mail Setup** ✅ ABGESCHLOSSEN
+- [x] **Resend Domain verifiziert** ✅
+  - Domain: maxflow-software.de hinzugefügt
+  - Status: Verified (alle grüne Häkchen)
+- [x] **IONOS DNS Records hinzugefügt** ✅
+  - **DKIM (TXT):** resend._domainkey → Verified ✅
+  - **SPF MX:** send → feedback-smtp.eu-west-1.amazonses.com → Verified ✅
+  - **SPF TXT:** send → v=spf1 include:amazonses.com ~all → Verified ✅
+  - **DMARC (TXT):** _dmarc → v=DMARC1; p=none; → Hinzugefügt ✅
+- [x] **Code Update abgeschlossen** ✅
+  - Von: `onboarding@resend.dev` → Zu: `noreply@maxflow-software.de`
+  - Deployed auf Vercel ✅
+- [x] **Kontaktformular getestet** ✅
+  - E-Mails kommen von verifizierter Domain
+  - Landen NICHT mehr im Spam! 🎉
+- [ ] Resend: DPA prüfen/akzeptieren (optional für DSGVO)
 
 **Phase 5: E-Mail-Entscheidung**
 ⚠️ **WICHTIG:** E-Mail-Postfach (office@maxflow-software.de) hängt am Webhosting!

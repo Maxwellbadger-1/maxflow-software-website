@@ -159,24 +159,34 @@ export function ContactForm() {
       </div>
 
       {/* Privacy Checkbox */}
-      <div className="flex items-start gap-3">
-        <input
-          type="checkbox"
-          id="privacy"
-          {...register("privacy")}
-          className="mt-1 h-4 w-4 rounded border-border"
-        />
-        <Label htmlFor="privacy" className="cursor-pointer font-normal">
-          Ich habe die{" "}
-          <a href="/datenschutz" className="text-primary hover:underline">
-            Datenschutzerklärung
-          </a>{" "}
-          gelesen und akzeptiere diese. <span className="text-error">*</span>
-        </Label>
+      <div className="space-y-2">
+        <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30 hover:bg-muted/50 transition-colors">
+          <input
+            type="checkbox"
+            id="privacy"
+            {...register("privacy")}
+            className="mt-1 h-5 w-5 rounded border-2 border-primary text-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 cursor-pointer flex-shrink-0"
+          />
+          <Label htmlFor="privacy" className="cursor-pointer font-normal leading-relaxed text-sm">
+            Ich habe die{" "}
+            <a
+              href="/datenschutz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              Datenschutzerklärung
+            </a>{" "}
+            gelesen und akzeptiere diese. <span className="text-red-500 font-semibold">*</span>
+          </Label>
+        </div>
+        {errors.privacy && (
+          <p className="text-sm text-red-600 font-medium flex items-center gap-2">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-600"></span>
+            {errors.privacy.message}
+          </p>
+        )}
       </div>
-      {errors.privacy && (
-        <p className="text-sm text-error">{errors.privacy.message}</p>
-      )}
 
       {/* Submit Button */}
       <Button

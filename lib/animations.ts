@@ -173,6 +173,6 @@ export const modalAnimation: Variants = {
 // Utility: Viewport animation config (for scroll-triggered animations)
 export const viewportConfig = {
   once: true, // Only animate once
-  margin: "-100px", // Trigger 100px before entering viewport
-  amount: 0.3 // At least 30% of element must be visible
+  margin: "0px", // Changed from -100px to fix mobile visibility
+  amount: 0.1 // Changed from 0.3 to 0.1 - only 10% needs to be visible (better for mobile)
 };

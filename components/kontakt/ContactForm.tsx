@@ -168,16 +168,16 @@ export function ContactForm() {
             className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary cursor-pointer flex-shrink-0"
           />
           <Label htmlFor="privacy" className="cursor-pointer text-sm leading-relaxed">
-            Ich habe die{" "}
+            Ich akzeptiere die{" "}
             <a
               href="/datenschutz"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:no-underline"
+              className="text-primary underline hover:no-underline whitespace-nowrap"
             >
               Datenschutzerklärung
-            </a>{" "}
-            gelesen und akzeptiere diese. <span className="text-red-500">*</span>
+            </a>
+            <span className="text-red-500">*</span>
           </Label>
         </div>
         {errors.privacy && (

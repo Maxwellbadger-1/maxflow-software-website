@@ -160,31 +160,28 @@ export function ContactForm() {
 
       {/* Privacy Checkbox */}
       <div className="space-y-2">
-        <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30 hover:bg-muted/50 transition-colors">
+        <div className="flex items-start gap-3">
           <input
             type="checkbox"
             id="privacy"
             {...register("privacy")}
-            className="mt-1 h-5 w-5 rounded border-2 border-primary text-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 cursor-pointer flex-shrink-0"
+            className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary cursor-pointer flex-shrink-0"
           />
-          <Label htmlFor="privacy" className="cursor-pointer font-normal leading-relaxed text-sm">
+          <Label htmlFor="privacy" className="cursor-pointer text-sm leading-relaxed">
             Ich habe die{" "}
             <a
               href="/datenschutz"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
+              className="text-primary underline hover:no-underline"
             >
               Datenschutzerklärung
             </a>{" "}
-            gelesen und akzeptiere diese. <span className="text-red-500 font-semibold">*</span>
+            gelesen und akzeptiere diese. <span className="text-red-500">*</span>
           </Label>
         </div>
         {errors.privacy && (
-          <p className="text-sm text-red-600 font-medium flex items-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-600"></span>
-            {errors.privacy.message}
-          </p>
+          <p className="text-sm text-red-600 ml-7">{errors.privacy.message}</p>
         )}
       </div>
 

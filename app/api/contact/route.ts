@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: "Maxflow Software Kontaktformular <onboarding@resend.dev>", // In production: noreply@maxflow-software.de
+      from: "Maxflow Software Kontaktformular <noreply@maxflow-software.de>",
       to: "office@maxflow-software.de",
       subject: `Kontaktanfrage: ${validatedData.subject}`,
       html: `

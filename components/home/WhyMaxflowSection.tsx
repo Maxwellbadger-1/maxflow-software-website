@@ -125,7 +125,7 @@ export function WhyMaxflowSection() {
               </div>
 
               <motion.div
-                className="grid grid-cols-2 gap-3"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-3"
                 variants={staggerChildren}
               >
                 {techStack.map((tech, index) => (

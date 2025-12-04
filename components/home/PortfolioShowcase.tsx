@@ -76,12 +76,12 @@ export function PortfolioShowcase() {
                     {/* Technologies */}
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.slice(0, 3).map((tech) => (
-                        <Badge key={tech} variant="secondary" className="text-xs">
+                        <Badge key={tech} variant="secondary" className="text-xs whitespace-nowrap">
                           {tech}
                         </Badge>
                       ))}
                       {project.technologies.length > 3 && (
-                        <Badge variant="secondary" className="text-xs">
+                        <Badge variant="secondary" className="text-xs whitespace-nowrap">
                           +{project.technologies.length - 3}
                         </Badge>
                       )}

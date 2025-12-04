@@ -119,8 +119,8 @@ export function TechExcellence() {
                     </p>
 
                     {/* Stats badge */}
-                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${feature.color} text-white shadow-lg`}>
-                      <span className="text-xs font-semibold">
+                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r ${feature.color} text-white shadow-lg text-center`}>
+                      <span className="text-xs font-semibold whitespace-nowrap">
                         {feature.stats}
                       </span>
                     </div>

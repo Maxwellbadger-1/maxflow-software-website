@@ -72,7 +72,7 @@ export function FinalCTA() {
 
           {/* Stats/Trust Indicators */}
           <motion.div
-            className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/20"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/20"
             variants={fadeInUp}
             transition={{ delay: 0.4 }}
           >

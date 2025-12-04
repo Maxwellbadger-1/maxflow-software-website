@@ -314,7 +314,7 @@ export default function UeberUnsPage() {
                       <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${colors.badge}`} />
                       {category.title}
                     </h3>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {category.technologies.map((tech, idx) => (
                         <motion.div
                           key={tech}

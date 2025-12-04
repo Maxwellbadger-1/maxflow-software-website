@@ -419,33 +419,31 @@ Gradients: Indigo→Purple→Pink (verschiedene Kombinationen)
 
 ### 🚀 Deployment-Plan (Vercel)
 
-**Phase 1: Vorbereitung**
-- [ ] GitHub Repository erstellen & Code pushen
-  ```bash
-  git init
-  git add .
-  git commit -m "Initial commit: Maxflow Software Website"
-  git remote add origin https://github.com/USERNAME/maxflow-software-website.git
-  git push -u origin main
-  ```
-- [ ] Vercel Account erstellen (https://vercel.com → Continue with GitHub)
-- [ ] Environment Variable RESEND_API_KEY notieren: `re_PEMHYZUn_MHmL7PaahCg8UZA7GEszZ2Fq`
+**Phase 1: Vorbereitung** ✅ ABGESCHLOSSEN
+- [x] GitHub Repository erstellen & Code pushen
+  - **Repository:** https://github.com/Maxwellbadger-1/maxflow-software-website
+  - **Commit:** Production-ready mit 94 Dateien
+  - **Datum:** 2025-12-04
+- [x] Vercel Account erstellt (via GitHub OAuth)
+- [x] Environment Variable RESEND_API_KEY notiert: `re_PEMHYZUn_MHmL7PaahCg8UZA7GEszZ2Fq`
 
-**Phase 2: Vercel Deployment**
-- [ ] Vercel Dashboard → "Add New..." → "Project"
-- [ ] GitHub Repo `maxflow-software-website` importieren
-- [ ] Environment Variable setzen: `RESEND_API_KEY=re_PEMHYZUn_MHmL7PaahCg8UZA7GEszZ2Fq`
-- [ ] "Deploy" klicken (dauert 2-3 Min)
+**Phase 2: Vercel Deployment** ✅ ABGESCHLOSSEN
+- [x] Vercel Projekt via API erstellt
+- [x] GitHub Repo `maxflow-software-website` verbunden
+- [x] Environment Variable gesetzt: `RESEND_API_KEY=re_PEMHYZUn_MHmL7PaahCg8UZA7GEszZ2Fq`
+- [x] Deployment erfolgreich abgeschlossen (Status: READY)
+- [x] Test-URL: **https://maxflow-software-website-2w6r38ve8-maxwellbadger-1s-projects.vercel.app** ✅ LIVE!
 - [ ] Vercel: DPA (Data Processing Addendum) akzeptieren (Settings → Security)
-- [ ] Test-URL prüfen (z.B. maxflow-software-website.vercel.app)
 
-**Phase 3: Domain-Konfiguration (maxflow-software.de)**
-- [ ] **Vercel:** Settings → Domains → "maxflow-software.de" hinzufügen
-- [ ] **IONOS DNS ändern:**
+**Phase 3: Domain-Konfiguration (maxflow-software.de)** 🔄 IN BEARBEITUNG
+- [x] **Vercel:** Domains hinzugefügt via API
+  - `maxflow-software.de` ✅
+  - `www.maxflow-software.de` (Redirect zu apex) ✅
+- [ ] **IONOS DNS ändern:** ⚠️ AKTION ERFORDERLICH
   - Login: https://www.ionos.de → Domains & SSL → maxflow-software.de → DNS
   - **A Record:** @ → `76.76.21.21` (Vercel IP)
   - **CNAME Record:** www → `cname.vercel-dns.com`
-  - Alte A/CNAME Records löschen (MX Records BEHALTEN!)
+  - ⚠️ Alte A/CNAME Records löschen (MX Records BEHALTEN!)
 - [ ] DNS Propagierung warten (1-24h, meist 1-2h)
   - Status prüfen: https://www.whatsmydns.net/#A/maxflow-software.de
   - Soll zeigen: 76.76.21.21

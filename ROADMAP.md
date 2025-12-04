@@ -148,6 +148,16 @@
 - [x] **Über uns - Tech Stack Grid**
   - Grid: `grid-cols-2` → `grid-cols-1 sm:grid-cols-2`
   - Optimale Darstellung auf allen Geräten
+- [x] **Viewport Animation Fix - KRITISCH!** ✅
+  - Problem: Listings (TechExcellence, PortfolioShowcase) wurden auf Mobile nicht angezeigt
+  - Ursache: `viewportConfig` benötigte 30% Sichtbarkeit + -100px Margin
+  - Fix: `amount: 0.3` → `0.1` (nur 10% Sichtbarkeit nötig)
+  - Fix: `margin: "-100px"` → `"0px"` (kein negativer Margin)
+  - Ergebnis: Alle Grid-Items werden jetzt auf Mobile korrekt angezeigt! 🎉
+- [x] **Kontaktformular - Datenschutz-Checkbox**
+  - Text gekürzt: "Ich habe die Datenschutzerklärung gelesen..." → "Ich akzeptiere die Datenschutzerklärung"
+  - `whitespace-nowrap` auf Link verhindert ungünstigen Umbruch
+  - Kompakte, mobile-freundliche Darstellung
 
 ---
 

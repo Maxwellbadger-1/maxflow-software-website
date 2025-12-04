@@ -1,0 +1,19 @@
+# robots.txt für Maxflow Software
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://maxflow-software.de/sitemap.xml
+
+# Disallow admin/api routes
+Disallow: /api/
+
+# Allow all other pages
+Allow: /
+Allow: /leistungen
+Allow: /portfolio
+Allow: /ueber-uns
+Allow: /kontakt
+Allow: /impressum
+Allow: /datenschutz

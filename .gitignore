@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# project documentation
+# Only allow ROADMAP.md in project root
+# Prevent duplicate roadmaps
+**/ROADMAP.md
+!ROADMAP.md

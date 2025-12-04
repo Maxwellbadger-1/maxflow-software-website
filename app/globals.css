@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================
+   MAXFLOW SOFTWARE - DESIGN SYSTEM
+   ============================================ */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  /* Colors - Primary */
+  --primary: 99 102 241; /* Indigo #6366f1 */
+  --primary-foreground: 255 255 255;
+
+  /* Colors - Background & Foreground */
+  --background: 255 255 255;
+  --foreground: 15 23 42; /* Slate 900 */
+
+  /* Colors - Muted */
+  --muted: 241 245 249; /* Slate 100 */
+  --muted-foreground: 100 116 139; /* Slate 500 */
+
+  /* Colors - Accent */
+  --accent: 240 253 250; /* Teal 50 */
+  --accent-foreground: 15 23 42;
+
+  /* Colors - Border & Card */
+  --border: 226 232 240; /* Slate 200 */
+  --card: 255 255 255;
+  --card-foreground: 15 23 42;
+
+  /* Colors - Semantic */
+  --success: 34 197 94; /* Green 500 */
+  --warning: 234 179 8; /* Yellow 500 */
+  --error: 239 68 68; /* Red 500 */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, rgb(99, 102, 241) 0%, rgb(139, 92, 246) 100%);
+  --gradient-mesh: radial-gradient(at 40% 20%, rgb(99, 102, 241) 0, transparent 50%),
+                   radial-gradient(at 80% 80%, rgb(139, 92, 246) 0, transparent 50%),
+                   radial-gradient(at 0% 50%, rgb(244, 114, 182) 0, transparent 50%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Border Radius */
+  --radius: 0.75rem; /* 12px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.25rem; /* 20px */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 15 23 42; /* Slate 900 */
+    --foreground: 241 245 249; /* Slate 100 */
+    --muted: 30 41 59; /* Slate 800 */
+    --muted-foreground: 148 163 184; /* Slate 400 */
+    --card: 30 41 59;
+    --card-foreground: 241 245 249;
+    --border: 51 65 85; /* Slate 700 */
   }
 }
 
+@theme inline {
+  /* Font Family */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Colors (Tailwind format) */
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-border: rgb(var(--border));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  @apply border-border;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold tracking-tight;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+  line-height: 1.1;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+  line-height: 1.2;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+  line-height: 1.3;
+}
+
+p {
+  @apply text-base md:text-lg leading-relaxed;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.container {
+  @apply mx-auto max-w-7xl px-4 md:px-8;
+}
+
+.section {
+  @apply py-20 md:py-32;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: var(--gradient-primary);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Radial gradient utility for vignette effects */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
 }

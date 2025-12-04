@@ -23,6 +23,38 @@
 
 ## 🎯 Heute Abgeschlossen (2025-12-04)
 
+### Portfolio & Tech Excellence Animationen
+- [x] **Portfolio Hover-Effekte**
+  - Screenshot Preview mit Scale-Animation (scale: 110%)
+  - Gradient Overlay beim Hover (background/90)
+  - Animated ExternalLink Icon (scale 0.5 → 1)
+  - Category Badge oben rechts (backdrop-blur)
+  - Implementiert in PortfolioGrid.tsx und PortfolioShowcase.tsx
+- [x] **Tech Excellence Animated Icons**
+  - Icon Wiggle bei Hover (rotate: -10° → 10° → -10° → 0°)
+  - Icon Scale bei Hover (1 → 1.1)
+  - Continuous Float Animation (y: 0 → -3 → 0, 2s loop)
+  - Gradient Border mit Animation
+  - Implementiert in TechExcellence.tsx
+
+### Steuersoftware Integration
+- [x] **Bilder integriert** (4 Screenshots)
+  - Dashboard mit Einnahmen/Ausgaben/Verlust-Übersicht
+  - Ausgabenverwaltung mit E-Rechnung Import
+  - Belegverwaltung mit GoBD-Archivierung
+  - EÜR-Generierung und Export
+- [x] **Projekt-Daten erstellt** in projects.ts
+  - Detaillierte Beschreibung
+  - Tech Stack: Next.js, React, TypeScript, Prisma, PostgreSQL
+  - Kategorie: Web-App
+  - Featured Project (als erstes angezeigt)
+- [x] **Detailseite erstellt** (/portfolio/tax-software)
+  - Hero mit Gradient Background
+  - Hauptfunktionen (10 Features)
+  - Technische Highlights
+  - Screenshot-Grid mit 4 Bildern
+  - CTA Section
+
 ### Kontaktformular mit Resend & Spam-Schutz
 - [x] **Resend Integration** (E-Mail Service)
   - resend Package installiert
@@ -536,6 +568,24 @@ Gradients: Indigo→Purple→Pink (verschiedene Kombinationen)
 ---
 
 ## 📦 Portfolio Assets
+
+### Steuersoftware für Kleinunternehmer (Echtes Projekt) 🆕
+- **Screenshots:** 4 Bilder in `/public/images/projects/`
+  - tax-software-1.png (Dashboard)
+  - tax-software-2.png (Ausgaben)
+  - tax-software-3.png (Belege)
+  - tax-software-4.png (EÜR)
+- **Tech Stack:** Next.js, React, TypeScript, Prisma, PostgreSQL, Tailwind CSS
+- **Kategorie:** Web-App
+- **Features:**
+  - Dashboard mit Echtzeit-Übersicht (Einnahmen/Ausgaben/Verlust)
+  - E-Rechnung Import (ZUGFeRD/XRechnung)
+  - Beleg-Scanning mit automatischer Datenextraktion
+  - EÜR-Generierung (Einnahmen-Überschuss-Rechnung)
+  - Cashflow-Prognose & Forderungsmanagement
+  - Professionelles PDF-Design mit Branding
+  - GoBD-konforme Archivierung
+- **Detailseite:** `/portfolio/tax-software`
 
 ### Hotel-Buchungssoftware (Echtes Projekt)
 - **Screenshots:** 4 Bilder in `/public/images/projects/`

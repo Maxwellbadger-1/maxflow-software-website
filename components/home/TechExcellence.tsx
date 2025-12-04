@@ -101,14 +101,33 @@ export function TechExcellence() {
 
                   {/* Content */}
                   <div className="relative z-10">
-                    {/* Icon */}
-                    <div
+                    {/* Animated Icon */}
+                    <motion.div
                       className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} p-0.5 mb-4`}
+                      whileHover={{
+                        rotate: [0, -10, 10, -10, 0],
+                        scale: [1, 1.1, 1.1, 1.1, 1]
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        ease: "easeInOut"
+                      }}
                     >
                       <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-primary" />
+                        <motion.div
+                          animate={{
+                            y: [0, -3, 0],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        >
+                          <Icon className="h-6 w-6 text-primary" />
+                        </motion.div>
                       </div>
-                    </div>
+                    </motion.div>
 
                     {/* Text */}
                     <h3 className="text-lg font-semibold mb-2">

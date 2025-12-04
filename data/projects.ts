@@ -15,6 +15,19 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
+    title: "Steuersoftware für Kleinunternehmer",
+    slug: "tax-software",
+    shortDescription: "Intuitive Buchhaltungssoftware mit EÜR-Export",
+    description:
+      "Eine vollständige Buchhaltungslösung für Kleinunternehmer mit Dashboard-Übersicht, Einnahmen- und Ausgabenverwaltung, automatischer Belegverarbeitung, EÜR-Generierung (Einnahmen-Überschuss-Rechnung), Cashflow-Prognose und Forderungsmanagement. Die Software bietet E-Rechnung-Import (ZUGFeRD/XRechnung), Beleg-Scanning mit automatischer Datenextraktion und professionelles PDF-Design mit individueller Firmen-Gestaltung.",
+    image: "/images/projects/tax-software-1.png",
+    category: "webapp",
+    mockupType: "dashboard",
+    technologies: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    featured: true,
+  },
+  {
+    id: "2",
     title: "Hotel-Buchungssoftware",
     slug: "hotel-booking-system",
     shortDescription: "Professionelle Desktop-Anwendung für Hotelverwaltung",
@@ -27,7 +40,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "2",
+    id: "3",
     title: "Corporate Website",
     slug: "corporate-website",
     shortDescription: "Professionelle Unternehmenswebsite mit CMS",
@@ -37,19 +50,6 @@ export const projects: Project[] = [
     category: "website",
     mockupType: "website",
     technologies: ["Next.js", "Sanity CMS", "Tailwind CSS", "Framer Motion"],
-    featured: true,
-  },
-  {
-    id: "3",
-    title: "Task Management App",
-    slug: "task-management",
-    shortDescription: "Kollaborative Projektmanagement-Lösung",
-    description:
-      "Eine intuitive App für Teamkollaboration und Projektmanagement mit Echtzeit-Updates und umfangreichen Features.",
-    image: "/images/projects/task-app-placeholder.svg",
-    category: "software",
-    mockupType: "mobile",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
     featured: true,
   },
 ];

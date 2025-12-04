@@ -84,17 +84,33 @@ function ProjectCard({ project }: { project: Project }) {
     <motion.div variants={staggerItem} whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
       <Link href={`/portfolio/${project.slug}`}>
         <div className="group h-full rounded-xl bg-card overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-          {/* Project Image */}
+          {/* Project Image with Screenshot Preview */}
           <div className="relative h-56 bg-gradient-to-br from-primary/20 to-purple-500/20 overflow-hidden">
+            {/* Main Image */}
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover object-top"
+              className="object-cover object-top transition-all duration-500 group-hover:scale-110"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <ExternalLink className="h-8 w-8 text-primary" />
+
+            {/* Overlay with Icon */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                whileHover={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ExternalLink className="h-8 w-8 text-primary drop-shadow-lg" />
+              </motion.div>
+            </div>
+
+            {/* Category Badge */}
+            <div className="absolute top-3 right-3 z-20">
+              <Badge variant="secondary" className="backdrop-blur-sm bg-background/80 border-primary/20">
+                {project.category === "website" ? "Website" : project.category === "software" ? "Software" : "Web-App"}
+              </Badge>
             </div>
           </div>
 

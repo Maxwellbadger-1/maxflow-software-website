@@ -494,20 +494,17 @@ Gradients: Indigo→Purple→Pink (verschiedene Kombinationen)
 - [x] Test-URL: **https://maxflow-software-website-2w6r38ve8-maxwellbadger-1s-projects.vercel.app** ✅ LIVE!
 - [ ] Vercel: DPA (Data Processing Addendum) akzeptieren (Settings → Security)
 
-**Phase 3: Domain-Konfiguration (maxflow-software.de)** 🔄 IN BEARBEITUNG
+**Phase 3: Domain-Konfiguration (maxflow-software.de)** ✅ ABGESCHLOSSEN
 - [x] **Vercel:** Domains hinzugefügt via API
   - `maxflow-software.de` ✅
   - `www.maxflow-software.de` (Redirect zu apex) ✅
-- [ ] **IONOS DNS ändern:** ⚠️ AKTION ERFORDERLICH
-  - Login: https://www.ionos.de → Domains & SSL → maxflow-software.de → DNS
-  - **A Record:** @ → `76.76.21.21` (Vercel IP)
-  - **CNAME Record:** www → `cname.vercel-dns.com`
-  - ⚠️ Alte A/CNAME Records löschen (MX Records BEHALTEN!)
-- [ ] DNS Propagierung warten (1-24h, meist 1-2h)
-  - Status prüfen: https://www.whatsmydns.net/#A/maxflow-software.de
-  - Soll zeigen: 76.76.21.21
-- [ ] SSL-Zertifikat automatisch aktiviert (Let's Encrypt via Vercel)
-- [ ] Live-Test: https://maxflow-software.de (mit 🔒)
+- [x] **IONOS DNS geändert** ✅
+  - A Record: @ → `76.76.21.21` (Vercel IP)
+  - CNAME Record: www → `cname.vercel-dns.com`
+  - MX Records behalten für E-Mail
+- [x] DNS Propagierung abgeschlossen ✅
+- [x] SSL-Zertifikat aktiviert (Let's Encrypt via Vercel) ✅
+- [x] Live-Test: https://maxflow-software.de ✅ LIVE & SECURE 🔒
 
 **Phase 4: E-Mail Setup** ✅ ABGESCHLOSSEN
 - [x] **Resend Domain verifiziert** ✅
@@ -559,11 +556,58 @@ Gradients: Indigo→Purple→Pink (verschiedene Kombinationen)
 - **Mit Vercel + Google Mail:** 84€/Jahr (spart 147€/Jahr)
 - **Mit Vercel + nur Resend:** 15€/Jahr (spart 216€/Jahr, aber keine E-Mail!)
 
-### Noch zu tun (Post-Launch)
-- [ ] Google Search Console Setup
-- [ ] Analytics (optional, DSGVO-konform: Plausible/Matomo)
-- [ ] Monitoring (optional: UptimeRobot, Sentry)
-- [ ] Backup-Strategie (Git = automatisches Backup)
+---
+
+## 🚀 Post-Launch Phase
+
+### SEO & Sichtbarkeit
+- [ ] **Google Search Console Setup**
+  - Website bei Google Search Console hinzufügen
+  - Sitemap einreichen (https://maxflow-software.de/sitemap.xml)
+  - Indexierung überprüfen
+  - Core Web Vitals überwachen
+- [ ] **Google Business Profile** (optional)
+  - Firmenprofil erstellen für lokale Suche
+  - Adresse, Öffnungszeiten, Fotos hinzufügen
+
+### Analytics & Monitoring (Optional, DSGVO-konform)
+- [ ] **Analytics Setup**
+  - Option 1: Plausible Analytics (DSGVO-konform, kein Cookie-Banner nötig)
+  - Option 2: Matomo (selbst gehostet)
+  - Option 3: Verzichten (Google Search Console reicht für Start)
+- [ ] **Uptime Monitoring**
+  - UptimeRobot (kostenlos) für Verfügbarkeits-Alerts
+  - E-Mail-Benachrichtigung bei Ausfällen
+- [ ] **Error Tracking** (optional)
+  - Sentry für JavaScript Error Tracking
+  - Nur bei Bedarf (wenn viele User-Probleme auftreten)
+
+### Performance & Qualität
+- [ ] **Lighthouse Audit durchführen**
+  - Performance Score > 90 prüfen
+  - Accessibility Score > 95 prüfen
+  - Best Practices > 90 prüfen
+  - SEO Score > 95 prüfen
+- [ ] **PageSpeed Insights testen**
+  - Mobile & Desktop Performance
+  - Core Web Vitals optimieren falls nötig
+
+### Backup & Security
+- [x] **Backup-Strategie** ✅
+  - Git Repository = automatisches Backup
+  - GitHub hat vollständige Historie
+  - Vercel hat automatische Backups aller Deployments
+
+### Content & Marketing (Später)
+- [ ] **Blog einrichten** (optional, für SEO)
+  - MDX-Blog mit Next.js
+  - Artikel über Projekte, Technologien, Best Practices
+- [ ] **Social Media**
+  - LinkedIn Profil/Seite erstellen
+  - Projekte teilen
+- [ ] **Portfolio erweitern**
+  - Weitere echte Projekte hinzufügen
+  - Placeholder-Projekte durch echte ersetzen
 
 ---
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Code2, Terminal, Zap } from "lucide-react";
 import { staggerChildren, staggerItem, viewportConfig } from "@/lib/animations";
 import { LiveTerminal } from "@/components/shared/LiveTerminal";
@@ -25,9 +26,24 @@ const features = [
 
 export function DevelopmentShowcase() {
   return (
-    <section className="section bg-muted/30 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background pointer-events-none" />
+    <section className="section relative overflow-hidden">
+      {/* Background Image with Professional Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/dark-textile.jpg"
+          alt="Professional texture background"
+          fill
+          className="object-cover object-center"
+          quality={75}
+          sizes="100vw"
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+        />
+        {/* Dark overlay - transparent to show texture */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/30 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-[2]" />
+      </div>
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -39,10 +55,10 @@ export function DevelopmentShowcase() {
             variants={staggerChildren}
           >
             <motion.div variants={staggerItem} className="mb-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Entwicklung in Aktion
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/80">
                 Sehen Sie, wie wir arbeiten. Mit modernsten Entwicklungstools
                 und Best Practices bringen wir Ihre Ideen zum Leben.
               </p>
@@ -56,14 +72,14 @@ export function DevelopmentShowcase() {
                   <motion.div
                     key={feature.title}
                     variants={staggerItem}
-                    className="flex items-start gap-4 p-4 rounded-lg bg-background/50 border border-border hover:border-primary/50 transition-colors"
+                    className="flex items-start gap-4 p-4 rounded-lg bg-white/10 border border-white/20 hover:border-primary/50 transition-colors backdrop-blur-sm"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/30 to-purple-500/30 flex items-center justify-center flex-shrink-0">
+                      <Icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">{feature.title}</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-semibold mb-1 text-white">{feature.title}</h3>
+                      <p className="text-sm text-white/70">
                         {feature.description}
                       </p>
                     </div>

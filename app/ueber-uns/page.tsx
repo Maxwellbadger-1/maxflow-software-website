@@ -2,6 +2,7 @@
 
 import { Metadata } from "next";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Code2, Heart, Rocket, Target, Zap, Users } from "lucide-react";
 import { ProcessVisualization } from "@/components/leistungen/ProcessVisualization";
 import { CTASection } from "@/components/shared/CTASection";
@@ -11,22 +12,22 @@ const values = [
   {
     icon: Target,
     title: "Qualität",
-    description: "Höchste Standards in Entwicklung und Design",
+    description: "Saubere Arbeit, auf die Sie sich verlassen können",
   },
   {
     icon: Zap,
-    title: "Innovation",
-    description: "Neueste Technologien und moderne Lösungen",
+    title: "Moderne Lösungen",
+    description: "Aktuelle Technik, die lange funktioniert",
   },
   {
     icon: Heart,
-    title: "Leidenschaft",
-    description: "Begeisterung für jedes Projekt",
+    title: "Persönlich",
+    description: "Wir nehmen uns Zeit für Ihre Fragen",
   },
   {
     icon: Users,
-    title: "Partnerschaft",
-    description: "Langfristige Beziehungen zu unseren Kunden",
+    title: "Langfristig",
+    description: "Auch nach dem Projekt für Sie da",
   },
 ];
 
@@ -91,21 +92,37 @@ export default function UeberUnsPage() {
               className="text-xl text-muted-foreground"
               variants={staggerItem}
             >
-              Ihr Partner für maßgeschneiderte digitale Lösungen mit modernsten
-              Technologien
+              Ihr Partner für digitale Lösungen
+              <br />
+              in Bad Tölz, Wolfratshausen & München
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="section bg-gradient-to-b from-foreground to-foreground/95 text-background relative overflow-hidden">
-        {/* Dark Background Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <section className="section text-background relative overflow-hidden">
+        {/* Background Image with Professional Overlays */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/workspace.jpg"
+            alt="Professional workspace"
+            fill
+            className="object-cover object-center"
+            quality={75}
+            sizes="100vw"
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+          />
+          {/* Dark overlay - 70% base + gradient for targeted coverage */}
+          <div className="absolute inset-0 bg-foreground/70 z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/50 via-foreground/30 to-foreground/50 z-[2]" />
+        </div>
 
         {/* Glow Orbs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl z-[3]" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl z-[3]" />
 
         <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -122,20 +139,36 @@ export default function UeberUnsPage() {
                 className="text-lg text-background/80 leading-relaxed mb-6"
                 variants={staggerItem}
               >
-                Bei Maxflow Software entwickeln wir individuelle
-                Softwarelösungen und moderne Websites, die perfekt auf die
-                Bedürfnisse unserer Kunden zugeschnitten sind. Wir verbinden
-                technische Expertise mit kreativem Design, um digitale Produkte
-                zu schaffen, die nicht nur funktionieren, sondern begeistern.
+                Seit 2024 entwickeln wir Websites und Software für Unternehmen
+                jeder Größe – vom kleinen Betrieb bis zum mittelständischen
+                Unternehmen im Raum Bad Tölz, Wolfratshausen und München.
               </motion.p>
-              <motion.p
-                className="text-lg text-background/80 leading-relaxed"
+              <motion.div
+                className="space-y-3"
                 variants={staggerItem}
               >
-                Unser Fokus liegt auf modernsten Technologien, agiler
-                Entwicklung und persönlicher Betreuung. Wir begleiten Sie von
-                der ersten Idee bis zum erfolgreichen Launch und darüber hinaus.
-              </motion.p>
+                <p className="text-lg text-background/80 font-semibold mb-3">
+                  Was uns auszeichnet:
+                </p>
+                <ul className="space-y-2 text-background/80">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Persönliche Beratung vor Ort</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Klare Kommunikation ohne Fachchinesisch</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Faire Preise, transparente Abläufe</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Auch nach Projektabschluss für Sie da</span>
+                  </li>
+                </ul>
+              </motion.div>
             </motion.div>
 
             <motion.div
@@ -152,9 +185,9 @@ export default function UeberUnsPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-background">Unsere Vision</h3>
                 <p className="text-background/80 leading-relaxed">
-                  Wir möchten der bevorzugte Partner für Unternehmen und
-                  Einzelpersonen sein, die digitale Lösungen suchen, die wirklich
-                  funktionieren und einen Unterschied machen.
+                  Ihr verlässlicher Partner für digitale Lösungen sein –
+                  verständlich erklärt, fair umgesetzt und langfristig betreut.
+                  Technologie, die wirklich hilft!
                 </p>
               </div>
             </motion.div>
@@ -273,13 +306,13 @@ export default function UeberUnsPage() {
             </motion.div>
 
             <motion.h2 className="mb-4" variants={staggerItem}>
-              Unsere Technologien
+              Womit wir arbeiten
             </motion.h2>
             <motion.p
               className="text-muted-foreground"
               variants={staggerItem}
             >
-              Wir arbeiten mit den modernsten und bewährtesten Technologien
+              Moderne, bewährte Werkzeuge für zuverlässige Lösungen
             </motion.p>
           </motion.div>
 

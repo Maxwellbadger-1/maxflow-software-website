@@ -3,8 +3,8 @@ import { ContactForm } from "@/components/kontakt/ContactForm";
 import { ContactInfo } from "@/components/kontakt/ContactInfo";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Maxflow Software",
-  description: "Kontaktieren Sie uns für Ihr nächstes Projekt. Wir freuen uns auf Ihre Anfrage.",
+  title: "Kontakt | Maxflow Software | Bad Tölz - München",
+  description: "Lassen Sie uns über Ihr Projekt sprechen! Persönliche Beratung für Websites & Software in Bad Tölz, Wolfratshausen und München. office@maxflow-software.de",
 };
 
 export default function KontaktPage() {

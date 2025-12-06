@@ -21,6 +21,106 @@
 
 ---
 
+## 🎯 Heute Abgeschlossen (2025-12-05)
+
+### ✅ Website Relaunch: Von Tech-Sprache zu Unternehmer-Sprache
+Komplette Umgestaltung aller Texte und Inhalte gemäß HANDOVER.md vom 2025-12-05.
+
+#### Phase 1: Text-Vereinfachungen ✅ ABGESCHLOSSEN
+- [x] **Hero Section umgeschrieben**
+  - Headline: "Websites & Software für Ihr Unternehmen"
+  - Lokaler Bezug: "Bad Tölz • Wolfratshausen • München"
+  - Subheadline vereinfacht: "Von der Idee bis zum fertigen Produkt"
+  - Tech-Stack Pills komplett entfernt
+
+- [x] **Leistungen-Seite vereinfacht** (data/services.ts)
+  - Software: "Software für Ihren Betrieb" (statt "Maßgeschneiderte Software-Entwicklung")
+  - Konkrete Beispiele: Hotel-Buchung, Steuer-Software, Lagerverwaltung
+  - Websites: "Professionelle Websites" mit verständlichen Features
+  - Beratung: "Ohne Fachchinesisch"
+  - Wartung: "Auch nach der Fertigstellung sind wir für Sie da"
+  - Alle Tech-Begriffe entfernt oder erklärt
+
+- [x] **Über-uns-Seite lokalisiert**
+  - Hero: "Ihr Partner für digitale Lösungen in Bad Tölz, Wolfratshausen & München"
+  - Mission: "Seit 2024" + "Was uns auszeichnet" (4 Punkte)
+  - Vision vereinfacht: "Technologie, die wirklich hilft!"
+  - Werte umformuliert: "Saubere Arbeit", "Moderne Lösungen", "Persönlich", "Langfristig"
+  - Technologien-Titel: "Womit wir arbeiten" (statt "Unsere Technologien")
+
+- [x] **Homepage-Texte vereinfacht** (WhyMaxflowSection)
+  - Features umgeschrieben: "Moderne, zuverlässige Technik", "Passt zu Ihnen", etc.
+  - Tech-Stack Grid komplett entfernt
+  - Neues Layout: Zentriert mit 2-spaltigem Feature-Grid
+  - Beschreibung: "Digitale Lösungen, die zu Ihnen passen – verständlich, zuverlässig und persönlich betreut"
+
+- [x] **Portfolio-Beschreibungen angepasst** (data/projects.ts)
+  - Steuersoftware: "Endlich keine Excel-Listen mehr! Belege fotografieren..."
+  - Hotel-Software: "Zimmer & Gäste verwalten - alles im Blick"
+  - Corporate Website: "Ihre digitale Visitenkarte im Internet"
+  - Technologien vereinfacht: "Web-Anwendung", "Desktop-Programm", "Offline nutzbar"
+
+- [x] **Meta Descriptions aktualisiert**
+  - Homepage: SEO für "Website Bad Tölz", "Software München"
+  - Portfolio: Konkrete Projekte erwähnt
+  - Kontakt: Lokal + E-Mail-Adresse
+  - Alle Keywords lokalisiert (Bad Tölz, Wolfratshausen, München)
+
+#### Phase 2: Visuelle Komponenten ✅ ABGESCHLOSSEN
+- [x] **BrowserMockup Component erstellt** (components/shared/BrowserMockup.tsx)
+  - Animiertes Browser-Fenster mit 3D-Perspektive
+  - Auto-rotating Screenshots (3 Sekunden Intervall)
+  - Window Controls (macOS Style)
+  - URL Bar mit Lock-Icon
+  - Smooth Transitions mit Framer Motion
+  - Navigation Dots für manuelle Auswahl
+  - Glow-Effekt im Hintergrund
+
+- [x] **BrowserMockup in Hero Section integriert**
+  - Zwischen Subheadline und CTA-Buttons platziert
+  - 3 Screenshots rotierend: Hotel-Software, Steuer-Software, Corporate-Website
+  - Ersetzt die TypingCode Animation (technischer → visueller Fokus)
+
+- [x] **ModernMockups Component erstellt** (components/shared/ModernMockups.tsx)
+  - Ultra-detaillierte Website-Designs (Hotel Dashboard, Corporate Website, E-Commerce Shop)
+  - Real Content: Preise, Buchungskalender, Statistiken, Produktkarten
+  - Micro-Typography: text-[0.45rem] bis text-[0.8rem] für Details
+  - DeviceMockup: Laptop + Mobile stacked mit Auto-Rotation
+  - Ersetzt alte Screenshot-basierte Mockups
+
+- [x] **Social Proof & Trust Indicators hinzugefügt**
+  - Hero Section: 5-Sterne Rating, "15+ Projekte", "100% Zufriedenheit"
+  - Trust Badge: "Aktuell verfügbar für neue Projekte" (grün, pulsierend)
+  - Service Badges: "Professionelle Websites" und "Maßgeschneiderte Software"
+  - Professionelle Präsentation wie moderne Agenturen
+
+- [x] **Professionelle Stock-Fotos mit Multi-Layer Overlays integriert**
+  - **code-editor.jpg** → DevelopmentShowcase.tsx (home page)
+    - 3-Layer Overlay: Horizontal gradient + Vertical gradient + Backdrop blur
+    - Perfekt sichtbarer Text bei voller Bildqualität
+  - **workspace.jpg** → Über uns Mission & Vision section
+    - Dark theme overlays für dunklen Hintergrund
+    - Multi-layer: from-foreground via-foreground/98 to-foreground/95
+  - **minimal-keyboard.jpg** → Leistungen Hero
+    - Light theme overlays für hellen Hintergrund
+    - Responsive: object-cover object-center, quality={90}
+  - **story-tablet.jpg** → Portfolio page
+    - Background image mit backdrop-blur-[3px]
+    - Decorative gradient orbs on top
+  - **dark-textile.jpg** → CTASection component (multiple pages)
+    - Textur-Hintergrund für alle CTA-Sections
+    - Grid pattern + diagonal stripes overlay
+    - Used on: Leistungen, Über uns, Portfolio pages
+
+#### Phase 3: Testing & Quality Assurance ✅ ABGESCHLOSSEN
+- [x] **Production Build erfolgreich**
+  - Compile Time: 24.1 Sekunden
+  - 16 Seiten generiert (13 Static, 3 SSG)
+  - Keine TypeScript-Fehler
+  - Alle Routes funktionieren
+
+---
+
 ## 🎯 Heute Abgeschlossen (2025-12-04)
 
 ### Portfolio & Tech Excellence Animationen
@@ -724,10 +824,10 @@ Die Website ist **100% produktionsreif** und kann jederzeit deployed werden!
 
 ---
 
-**Roadmap Version:** 2.0 FINAL
+**Roadmap Version:** 2.1
 **Erstellt:** 2025-12-02
-**Letzte Aktualisierung:** 2025-12-03
-**Status:** ✅ KOMPLETT
+**Letzte Aktualisierung:** 2025-12-05
+**Status:** ✅ LIVE & OPTIMIERT
 
 ---
 

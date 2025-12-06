@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { Code2, Globe, Lightbulb, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,26 +30,43 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <section id="services" className="section bg-muted/30">
-      <div className="container">
+    <section id="services" className="py-32 md:py-40 relative overflow-hidden">
+      {/* Background Image - NO overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/minimal-keyboard.jpg"
+          alt="Professional workspace"
+          fill
+          className="object-cover object-center"
+          quality={75}
+          sizes="100vw"
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+        />
+      </div>
+
+      <div className="container relative z-10">
         {/* Section Header */}
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-16 relative z-20"
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
           variants={staggerChildren}
         >
-          <motion.h2 className="mb-4" variants={staggerItem}>
-            Unsere Leistungen
-          </motion.h2>
-          <motion.p
-            className="text-muted-foreground"
+          <motion.div
             variants={staggerItem}
+            className="bg-background/90 backdrop-blur-md rounded-2xl p-8 border border-border/50 shadow-xl"
           >
-            Von der Konzeption bis zur Umsetzung – wir entwickeln digitale
-            Lösungen, die Ihr Business voranbringen
-          </motion.p>
+            <h2 className="mb-4">
+              Unsere Leistungen
+            </h2>
+            <p className="text-muted-foreground">
+              Von der Konzeption bis zur Umsetzung – wir entwickeln digitale
+              Lösungen, die Ihr Business voranbringen
+            </p>
+          </motion.div>
         </motion.div>
 
         {/* Services Grid */}

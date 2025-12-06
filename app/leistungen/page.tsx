@@ -6,7 +6,7 @@ import { CTASection } from "@/components/shared/CTASection";
 
 export const metadata: Metadata = {
   title: "Unsere Leistungen | Maxflow Software",
-  description: "Maßgeschneiderte Software-Entwicklung, moderne Websites, Beratung und Support für Ihr digitales Projekt.",
+  description: "Software für Ihren Betrieb, professionelle Websites, persönliche Beratung und zuverlässiger Support. Bad Tölz - München.",
 };
 
 export default function LeistungenPage() {

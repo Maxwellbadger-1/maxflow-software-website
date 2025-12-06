@@ -5,23 +5,23 @@ import { DevelopmentShowcase } from "@/components/home/DevelopmentShowcase";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 
 export const metadata: Metadata = {
-  title: "Maxflow Software | Maßgeschneiderte Software & Websites | Next.js, React, TypeScript",
-  description: "Professionelle Software-Entwicklung und moderne Websites. Individuelle Lösungen mit Next.js, React, TypeScript. ✓ Responsive ✓ SEO-optimiert ✓ Performance 98+",
+  title: "Maxflow Software | Websites & Software für Ihr Unternehmen | Bad Tölz - München",
+  description: "Websites und Software für Unternehmen in Bad Tölz, Wolfratshausen und München. Persönliche Beratung, verständlich erklärt, zuverlässig umgesetzt. ✓ Vor Ort ✓ Ohne Fachchinesisch",
   keywords: [
-    "Software Entwicklung",
-    "Website Entwicklung",
-    "Next.js Entwickler",
-    "React Entwicklung",
-    "TypeScript",
-    "Maßgeschneiderte Software",
-    "Web Development",
-    "Performance Optimierung",
-    "SEO Optimierung",
-    "Responsive Design"
+    "Website Bad Tölz",
+    "Software München",
+    "Webdesign Wolfratshausen",
+    "Software Entwicklung Bayern",
+    "Website erstellen lassen",
+    "Buchhaltungssoftware",
+    "Hotel Software",
+    "Digitale Lösungen",
+    "Website für Unternehmen",
+    "Software für KMU"
   ],
   openGraph: {
-    title: "Maxflow Software | Professionelle Software & Website Entwicklung",
-    description: "Maßgeschneiderte Software und moderne Websites. Entwickelt mit neuesten Technologien für Ihren digitalen Erfolg.",
+    title: "Maxflow Software | Websites & Software für Ihr Unternehmen",
+    description: "Von der Idee bis zum fertigen Produkt – Wir entwickeln digitale Lösungen, die zu Ihnen passen. Bad Tölz - Wolfratshausen - München.",
     type: "website",
     locale: "de_DE",
   },

@@ -40,7 +40,7 @@ export function PortfolioGrid() {
             className={`px-6 py-3 rounded-lg font-medium transition-all ${
               activeCategory === category.id
                 ? "bg-primary text-primary-foreground shadow-lg"
-                : "bg-muted hover:bg-muted/80 text-foreground"
+                : "bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm"
             }`}
             variants={staggerItem}
             whileHover={{ scale: 1.05 }}
@@ -70,7 +70,7 @@ export function PortfolioGrid() {
       {/* No results */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-muted-foreground">
+          <p className="text-white/70">
             Keine Projekte in dieser Kategorie gefunden.
           </p>
         </div>

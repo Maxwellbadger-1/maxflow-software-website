@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# lighthouse reports
+lighthouse*.json
+
 # project documentation
 # Only allow ROADMAP.md in project root
 # Prevent duplicate roadmaps
